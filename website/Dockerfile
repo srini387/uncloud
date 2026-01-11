@@ -20,7 +20,7 @@ RUN npm ci
 RUN npm run build
 
 # Stage 3: Serve static Docusaurus site and landing page with Caddy.
-FROM caddy:2.10.0-alpine AS caddy
+FROM caddy:2.11-alpine AS caddy
 ## Copy the Caddyfile.
 COPY ./Caddyfile /etc/caddy/Caddyfile
 ## Copy the Docusaurus build output.
